@@ -1,0 +1,12 @@
+.auth {
+  display: flex;
+  justify-content: center;
+  .auth-form {
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+    h2 {
+      border-bottom: 1px solid #000;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.img-wrp {
+  position: relative;
+  img {
+    min-height: 200px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    h1 {
+      color: #fff;
+      padding: 10px;
+    }
+  }
+}
+
+.post {
+  .post-meta {
+    font-size: 12px;
+
+    .utils {
+      display: flex;
+      span:not(:first-child) {
+        margin-left: 10px;
+        svg {
+          margin-right: 5px;
+        }
+      }
+      span:first-child {
+        svg {
+          margin-right: 5px;
+        }
+      }
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}

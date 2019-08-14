@@ -1,0 +1,27 @@
+.comments {
+  h2 {
+    border-bottom: 1px solid #000;
+  }
+  .comment {
+    .user-info {
+      display: flex;
+      .utils {
+        span {
+          font-size: 12px;
+        }
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    .comment-meta {
+      font-size: 12px;
+    }
+  }
+  .comment-form {
+    .btn {
+      border-radius: 0;
+    }
+  }
+}

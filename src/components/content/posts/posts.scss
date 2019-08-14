@@ -1,0 +1,22 @@
+.post-card {
+  img {
+    max-height: 400px;
+    min-height: 150px;
+  }
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  .meta {
+    span {
+      svg {
+        margin: 0 5px;
+      }
+    }
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
