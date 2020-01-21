@@ -1,0 +1,9 @@
+.auth-link-wrp {
+  text-align: center;
+  .auth-link {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

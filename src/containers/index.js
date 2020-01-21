@@ -1,5 +1,15 @@
 import AppContainer from "./app";
 import AuthContainer from "./auth";
-import PostContainer from "./posts";
+import PostsContainer from "./posts";
+import PostContainer from "./post";
+import PostCreatingContainer from "./postCreating";
+import NavigationContainer from "./nav";
 
-export { AppContainer, AuthContainer, PostContainer };
+export {
+  AppContainer,
+  AuthContainer,
+  PostsContainer,
+  PostContainer,
+  PostCreatingContainer,
+  NavigationContainer,
+};

@@ -19,6 +19,7 @@ function setCookie(name, value, options = {}) {
 }
 
 function deleteCookie(name) {
+  console.log("cookie deleted");
   setCookie(name, "", {
     "max-age": -1,
   });

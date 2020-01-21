@@ -1,16 +1,16 @@
 import axios from "./axios";
 import URL from "../baseURL";
 export default {
-  signIn: postData =>
-    axios.post(`${URL}api/login`, postData, {
+  signIn: data =>
+    axios.post(`${URL}api/login`, data, {
       withCredentials: true,
     }),
 
-  signUp: postData =>
-    axios.post(`${URL}api/register`, postData, {
+  signUp: data =>
+    axios.post(`${URL}api/register`, data, {
       withCredentials: true,
     }),
-  userData: userId => axios.get(`${URL}api/users/${userId}`),
+  userData: id => axios.get(`${URL}api/users/${id}`),
   getUserIdFromCookies: () =>
     axios.get(`${URL}api/session`, {
       withCredentials: true,

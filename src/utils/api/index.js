@@ -1,4 +1,5 @@
-import userApi from './user'
-import postApi from './post'
+import userApi from "./user";
+import postApi from "./post";
+import apiMethods from "./ApiMethods";
 
-export default { userApi, postApi }
+export default { userApi, postApi, apiMethods };

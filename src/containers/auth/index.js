@@ -1,26 +1,29 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import Auth from 'components/content/auth'
-import { userActions } from 'store/actions'
+import React from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import Auth from "components/content/auth";
+import { userActions } from "store/actions";
 
-function AuthContainer (props) {
-  const { auth } = props
-  const handleSubmit = ({ Api, login, password, email }) => {
-    const Data = { login, password, email }
-    auth({ Api, Data })
-  }
-  return <Auth auth={handleSubmit} />
+function AuthContainer(props) {
+  const { api, isAuth, error } = props;
+  const handleSubmit = ({ type, login, password, email }) => {
+    const data = { login, password, email };
+    return api({ type, data });
+  };
+  return <Auth api={handleSubmit} isAuth={isAuth} error={error} />;
 }
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {
+    isAuth: state.userReducer.isAuth,
+    error: state.userReducer.error,
+  };
+};
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ auth: userActions.auth }, dispatch)
+  bindActionCreators({ api: userActions.api }, dispatch);
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(AuthContainer)
+)(AuthContainer);
